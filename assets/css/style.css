@@ -1,0 +1,726 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  background-color: white;
+}
+
+a {
+  color: #47b2e4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #73c5eb;
+  text-decoration: none;
+}
+
+
+header {
+  background-image: url("../img/rectangle_1.jpg");
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.primary {
+  background-color: #007bff; /* Blue primary button color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  padding-bottom: -180px;
+
+}
+
+@media (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+.heroSection{
+  /* display: flex;
+  flex-direction: row;
+  gap: 20px; */
+  background-color: #fff7f0;
+  /* justify-content: center;
+  align-items: center; */
+  /* background-image: url(Rectangle\ 1.png); */
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.slide {
+  position: absolute;
+  top: 0; /* Add this line to set the initial position at the top */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-image: url("../img/rectangle_1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.firstCol{
+  width: 50%;
+  padding-left: 20px;
+}
+.secondCol{
+  /* width: 50%; */
+  margin-top: 70px;
+}
+h1{
+  font-size: 4.125rem;
+}
+p{
+  font-size: 1.15rem;
+
+}
+.primary{
+  background-color: #141f3f;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 8px;
+
+}
+
+.secondary{
+  background-color: #141f3f00;
+  padding: 15px 30px;
+  color: black;
+  border-radius: 8px;
+
+}
+.primary:hover , .secondary:hover{
+cursor:pointer;
+}
+.heroSectionImage{
+  border-radius: 20px;
+  width: 60%;
+  z-index: 1000;
+}
+
+.circle{
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+  margin-top: -47px;
+  margin-left: -36px;
+}
+.circle1{
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #5db3f1;
+
+
+}
+.circle2{
+  height: 90px;
+width: 90px;
+border-radius: 50%;
+display: inline-block;
+border: 2px solid black;
+margin-top: -84px;
+margin-left: 6px;
+
+
+}
+
+.arrows{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap:15px
+}
+.arrow{
+  background-color: transparent;
+  border: none;
+}
+.arrow:hover{
+  cursor: pointer;
+}
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  /* Adjust styles for mobile devices */
+  .slides-container {
+    height: auto; /* Set height to auto for dynamic content */
+  }
+
+  .slide {
+    height: auto; /* Set height to auto for dynamic content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Adjust text size and alignment for mobile */
+  .slide h1 {
+    font-size: 24px;
+  }
+
+  .slide p {
+    font-size: 14px;
+  }
+
+  /* Adjust image size and alignment for mobile */
+  .slide .secondCol {
+   display: none;
+  }
+
+  .slide img.heroSectionImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* Apply border radius to image */
+  }
+}
+
+
+
+/* ************************************************8 */
+/* calculate Now */
+.calculator-section {
+
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.calculator-section h2 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-control {
+  background-color: #1e416e; /* Dark blue input background */
+  color: white;
+}
+
+#calculateBtn {
+  background-color: #87ceeb; /* Sky blue button color */
+  border-color: #87ceeb; /* Sky blue button border color */
+}
+
+#outcome {
+  width: 100px;
+  height: 100px;
+  background-color: #87ceeb; /* Sky blue circle background */
+  border-radius: 50%; /* Make it a circle */
+  text-align: center;
+  line-height: 100px;
+  font-size: 24px;
+  margin: 20px auto;
+}
+
+/* sec-2 image */
+.container-fluid {
+  padding-top: 50px;
+}
+
+.image-container {
+  overflow-x: hidden;
+  max-width: 1200px;
+}
+
+.image-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+  grid-gap: 1.5rem;
+  position: relative;
+  left: 0;
+  transition: .3s;
+}
+
+.image-wrapper > * {
+  aspect-ratio: 4 / 3;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .5rem;
+}
+
+
+/* calclaurte now */
+/* Custom styles */
+.calculate {
+  background-color: #141f3f; /* Entire section background color */
+  padding: 50px;
+  color: white;
+  width: 100%;
+}
+
+.calculator-section h2 {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background-color: white; /* White background for input fields */
+}
+
+#calculateBtn {
+  background-color: #58b1f0; /* Updated sky blue button color */
+  border-color: #58b1f0; /* Updated sky blue button border color */
+}
+
+#outcome {
+  width: 200px; /* Larger width for the outcome circle */
+  height: 200px; /* Larger height for the outcome circle */
+  background-color: #58b1f0; /* Updated sky blue circle background */
+  border-radius: 50%; /* Make it a circle */
+  text-align: center;
+  line-height: 200px; /* Center the text vertically */
+  font-size: 24px;
+  margin: 20px auto;
+}
+
+/* Styles for the wrapper-12 section */
+.wrapper-12 {
+  padding: 20px;
+}
+
+/* Styles for the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styles for the row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styles for the column with col-xs-12 class */
+.col-xs-12 {
+  width: 100%;
+}
+
+/* Styles for the col-data-wrapper-3 div */
+.col-data-wrapper-3 {
+  text-align: center;
+}
+
+/* Styles for the ellipse-2-copy-2-2 and ellipse-2-copy-2 div */
+.ellipse-2-copy-2-2, .ellipse-2-copy-2 {
+  width: 50px;
+  height: 50px;
+  background-color: #f00; /* Example background color */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Styles for the text-7 paragraph */
+.text-7 {
+  font-size: 24px;
+  color: #333; /* Example text color */
+}
+
+/* Styles for the rounded-rectangle-1 and rounded-rectangle-2 images */
+.rounded-rectangle-1, .rounded-rectangle-2 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Styles for the text-8 paragraph */
+.text-8 {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Styles for the rectangle-2-copy-3-holder div */
+.rectangle-2-copy-3-holder {
+  background-color: #141f3f; /* Example background color */
+  color: #fff; /* Example text color */
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Styles for the ellipse-3 image */
+.ellipse-3 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content-container {
+    max-width: 1200px;
+}
+
+.content-row {
+    display: flex;
+    justify-content: center;
+}
+
+.col-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.image-left {
+    flex: 1;
+    max-width: 400px;
+}
+
+.rounded-image {
+    max-width: 100%;
+}
+
+.content-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.welcome-text {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.bottom-image {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.content-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.learn-more-button {
+    background-color: #141f3f; /* Example background color */
+    color: #fff; /* Example text color */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.learn-more-button:hover {
+    background-color: #000; /* Example hover background color */
+}
+@media only screen and (max-width: 767px) {
+  .main-wrapper {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .content-container {
+    max-width: 100%; /* Adjust max-width for smaller screens */
+  }
+
+  .content-row {
+    flex-direction: column; /* Adjust flex-direction for smaller screens */
+    align-items: center; /* Align items to center for smaller screens */
+  }
+
+  .col-wrapper {
+    flex-direction: column; /* Adjust flex-direction for smaller screens */
+    align-items: center; /* Align items to center for smaller screens */
+  }
+
+  .image-left,
+  .content-right {
+    flex: none; /* Remove flex-grow for smaller screens */
+    width: 100%; /* Set width to 100% for smaller screens */
+    max-width: 50%; /* Set max-width to 100% for smaller screens */
+    text-align: center; /* Align text to center for smaller screens */
+  }
+
+  .image-left {
+    margin-bottom: 20px; /* Add margin bottom for smaller screens */
+  }
+
+  .bottom-image {
+    max-width: 300px; /* Adjust max-width for smaller screens */
+  }
+
+  .welcome-text {
+    font-size: 40px; /* Adjust font size for smaller screens */
+    margin-bottom: 10px; /* Adjust margin bottom for smaller screens */
+  }
+
+  .content-text {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+/* test */
+/* Add your custom CSS styles here */
+.container {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.testimonials-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.testimonials-slider {
+  display: flex;
+  overflow-x: hidden; /* Updated to hide scrollbar */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  margin-bottom: 20px;
+  justify-content: center; /* Center testimonials */
+}
+
+.testimonial {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust width as needed */
+  scroll-snap-align: start;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  display: flex; /* Add flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial-content {
+  margin-bottom: 20px;
+}
+
+.client-name {
+  font-weight: bold;
+}
+
+.nav-arrows {
+  position: absolute;
+  bottom: 05px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-arrow {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+/* scribe */
+.newsletter-section {
+  background-color: #58b1f0;
+  padding: 50px 20px;
+}
+
+
+.newsletter-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter-heading h2 {
+  margin: 0;
+  color: white;
+  font-size: 70px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  /* background-color: #fff; */
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  color: #58b1f0;
+  cursor: pointer;
+}
+
+.newsletter-form button i {
+  margin-left: 5px;
+}
+
+/* Optional: FontAwesome icon styling */
+.fa-paper-plane {
+  font-family: 'Font Awesome 5 Free';
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .newsletter-heading h2 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%; /* Make input and button full width on small screens */
+  }
+}
+
+/* contact */
+.contact-section {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.container-contact {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.contact-section h2 {
+  text-align: center;
+}
+
+.contact-form {
+  margin-top: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  width: calc(50% - 10px);
+}
+
+.form-group textarea {
+  width: 100%;
+}
+
+.form-group button {
+  padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #58b1f0;
+    color: #fff;
+    cursor: pointer;
+    position: absolute; /* Position button absolutely */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+/* footer */
+.footer-section {
+  padding: 30px 0;
+  background-color: #1d1a26;
+  width: 100%;
+}
+
+.footer-logo {
+  max-width: 200px;
+  height: auto;
+  margin: auto;
+}
+
+.footer-nav {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-nav .nav-item {
+  margin: 0 10px; /* Adjust spacing between nav items */
+}
+
+.footer-nav .nav-link {
+  color: #fff;
+}
+
+.footer-nav .nav-link:hover {
+  color: #ccc; /* Change color on hover */
+}
+
